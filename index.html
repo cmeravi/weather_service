@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <script language="javascript" type="text/javascript" src="weather.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" language="javascript" src="city_list.json"></script> -->
+  <meta charset="utf-8"/>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Check your Weather</title>
+</head>
+<body>
+  <div class="context">
+    <div class="form_context">
+        <h4> Enter your Zip to check your weather</h4>
+        <form class="data_table" method="post" name="Check Weather" id="check_weather" onsubmit="return validate();">
+          <table>
+            <tr>
+              <td colspan="2">
+                Zip Code: <input type="text" id="zip" maxlength="10" size="10" name="Zip Code"/>
+              </td>
+            </tr>
+              <td>
+                <input type="button" onclick="getWeather()" value="Submit"/>
+              </td>
+              <td>
+                <input type="button" value="Reset" onclick="resetZip()"/>
+              </td>
+          </table>
+        </form>
+    </div>
+    <br/>
+    <div class="form_context">
+      <table class="data_table" id="data_table">
+        <caption><h4 id="city_name"></h4></caption>
+        <tr>
+          <td class="table_label">
+            Date Time:
+          </td>
+          <td id="date_time" class="table_data">
+          </td>
+        </tr>
+        <tr>
+          <td class="table_label">
+            Temperature(&deg;F):
+          </td>
+          <td id="temp" class="table_data">
+          </td>
+        </tr>
+        <tr>
+          <td class="table_label">
+            Current Pressure:
+          </td>
+          <td id="pressure" class="table_data">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>

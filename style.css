@@ -1,0 +1,41 @@
+.form_context {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  width: 35%;
+  text-align: center;
+  background-color: white;
+  display: inline-block;
+}
+
+.data_table {
+  display: inline-block;
+}
+
+.context {
+  width: 75%;
+  text-align: center;
+  display: inline-block;
+  background-image: url(https://scijinks.gov/review/weather-map/weather-map1.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  text-align: center;
+}
+
+.table_label {
+  text-align: right;
+}
+
+.table_data {
+  text-align: left;
+}
+
+table.data_table {
+  display: none;
+
+}
